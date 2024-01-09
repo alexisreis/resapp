@@ -1,0 +1,48 @@
+.calendar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    padding: 0 5%;
+}
+
+.calendar-header h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#calendar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0;
+    gap: 0.5em;
+}
+
+.reservation-div {
+    margin: 0.5em 0;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 2px 2px rgba(136, 136, 136, 0.3);
+    background-color: var(--background-color);
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.dark .reservation-div {
+    box-shadow: 0 2px 2px 2px rgba(255, 255, 255, 0.5);
+
+}
+
+.reservation-div.cancelled, .reservation-div.past {
+    color: #949494;
+    cursor: not-allowed;
+}
+
+.reservation-status {
+    background-color: #e1e1e1;
+    border-radius: 3px;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    padding: 0.2em 0.4em;
+}

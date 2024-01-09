@@ -1,0 +1,29 @@
+.arrow-icon {
+    width: 20px;
+}
+
+.day-span-div {
+    width: 300px;
+}
+
+.graph {
+    height: 400px;
+    width: 75vw;
+    margin: auto;
+}
+
+.graph-machine {
+    height: 100px;
+}
+
+.graph text, .graph-machine text {
+    fill: var(--text-color);
+}
+
+.stat-div {
+    border: 1px lightgray solid;
+    border-radius: 20px;
+    width:150px;
+    height:150px;
+    padding: 10px;
+}

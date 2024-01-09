@@ -1,0 +1,78 @@
+.nav-div {
+    background-color: var(--navbar-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    height: var(--navbar-height);
+    padding: 0 1em;
+    gap: 2em;
+}
+
+#app-logo {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease-in-out filter;
+}
+
+.nav-link:hover #app-logo {
+    filter: brightness(0.8);
+}
+
+
+#app-title {
+    font-size: 1em;
+}
+
+.nav-link {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    color: rgb(237, 237, 237);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 0.3s ease-in-out color;
+}
+
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.nav-link:active {
+    color: var(--text-hover);
+}
+
+.nav-link-active {
+    color: var(--main-color);
+}
+
+#signout-svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: invert(100%);
+}
+
+@media screen and (max-width: 1000px) {
+    #app-title {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-link {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav-link {
+        display: none;
+    }
+}

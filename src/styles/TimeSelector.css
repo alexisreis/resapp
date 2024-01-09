@@ -1,0 +1,101 @@
+.hour-selector{
+    overflow-x: scroll;
+    margin: 1em;
+}
+
+.hour {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    cursor: default;
+}
+
+.clickable-hour {
+    border: 1px solid #b0b0b0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark .clickable-hour {
+    background-color: #dadada;
+    color: var(--background-color);
+}
+
+.clickable-hour:not([disabled]) {
+    cursor: pointer;
+}
+
+.clickable-hour[disabled] {
+    background-color: #dadada;
+    color: #b0b0b0;
+}
+
+.dark .clickable-hour[disabled] {
+    background-color: var(--background-color);
+}
+
+.clickable-hour:not(.selected-hour):not([disabled]):hover {
+    background-color: #dadada;
+}
+
+.selected-hour {
+    background-color: var(--main-color) !important;
+    color: var(--white) !important;
+}
+
+.selected-hour:hover {
+    color: white;
+}
+
+.day-span {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0 1em;
+}
+
+.clickable-hour .hour-span {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.machine-status-span {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.green {
+    color: #00b300;
+}
+
+.orange {
+    color: #ff8c00;
+}
+
+.book-machine {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0.5em;
+    padding: 1em;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    border: 1px solid #b0b0b0;
+    transition: 0.3s ease-in-out transform;
+    z-index: 1;
+}
+
+.book-machine:hover {
+    transform: scale(102%);
+}
+
+.book-machine h4 {
+    margin: 1em 0;
+}

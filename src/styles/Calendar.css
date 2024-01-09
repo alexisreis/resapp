@@ -1,0 +1,147 @@
+.calendar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.event-details {
+    position: absolute;
+    top: 20vh;
+    right: 5vw;
+    max-width: 350px;
+    width: calc(2/7*100% - 10vw);
+    min-width: 250px;
+    z-index: 5;
+    background-color: var(--background-color);
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, .14),
+                0 9px 46px 8px rgba(0, 0, 0, .12),
+                0 11px 15px -7px rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.reservation-title {
+    flex: 0.7;
+    font-size: 1.5em;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+}
+
+.event-content-title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: .7em;
+    padding: 10px 0 0 0;
+}
+
+.event-content p {
+    margin: 0;
+    line-height: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+hr {
+    width: 95%;
+    margin: 1em 0;
+}
+
+.reservation-span {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: .5em;
+    text-decoration: underline;
+}
+
+.event-content li {
+    margin-left: 1em;
+    line-height: 2em;
+}
+
+.reservation-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+}
+
+.event-buttons-div {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    gap: .5em;
+}
+
+.event-details-header {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+    height: 10px;
+}
+
+
+/* Calendar styling in dark mode */
+
+/* Off range areas */
+.dark .rbc-off-range-bg {
+    background-color: #1c1c1c;
+}
+
+/* Today area */
+.dark .rbc-today {
+    background-color: #4a8c7b;
+}
+
+.rbc-current-time-indicator {
+    height: 3px;
+}
+
+/* Current time indicator */
+.dark .rbc-current-time-indicator {
+    background-color: var(--red);
+}
+
+/* Header buttons */
+.dark .rbc-btn-group {
+    background-color: var(--navbar-color);
+}
+
+.dark .rbc-toolbar button {
+    color: var(--text-color);
+}
+
+.dark .rbc-toolbar button:hover,
+.dark .rbc-toolbar button:focus,
+.dark .rbc-toolbar button:active {
+    background-color: var(--main-hover);
+    color: var(--text-color);
+}
+
+.dark button.rbc-active {
+    background-color: var(--main-color) !important;
+}
+
+.dark .rbc-day-slot .rbc-time-slot {
+    border-top: none;
+}
+
+.dark .reservation-icon {
+    filter: invert(1);
+}

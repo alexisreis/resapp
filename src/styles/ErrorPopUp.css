@@ -1,0 +1,29 @@
+.error-popup {
+    position: fixed;
+    top: 20vh;
+    border-radius: 8px;
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, .14),
+    0 9px 46px 8px rgba(0, 0, 0, .12),
+    0 11px 15px -7px rgba(0, 0, 0, .2);
+    z-index: 10;
+}
+
+.error-popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.error-message {
+    color: rgb(60, 64, 67);
+}
+
+@keyframes loading-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
